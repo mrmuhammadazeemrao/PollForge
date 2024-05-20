@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'webapp',
     'todo',
-    'polls'
+    'polls',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
