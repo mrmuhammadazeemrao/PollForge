@@ -1,0 +1,62 @@
+li a {
+  color: green;
+}
+
+body {
+  position: relative;
+  height: 100vh; /* This ensures the body covers the full viewport height */
+  margin: 0; /* Removes default margin */
+  overflow: hidden; /* Prevents any scroll caused by the pseudo-element */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/background.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  filter: blur(8px); /* Apply a blur effect. Adjust the pixel value as needed */
+  z-index: -1; /* Ensures the background is behind the content */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Provides a clean and modern font */
+  background: rgba(255, 255, 255, 0.8); /* Light translucent background */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none; /* Removes default bullet points */
+  margin: 20px; /* Adds some margin for better spacing */
+  background: rgba(255, 255, 255, 0.5); /* Lighter translucent background for the list */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  max-width: 300px; /* Restrict list width */
+  padding: 15px; /* Padding inside the list */
+}
+
+li {
+  margin-bottom: 10px; /* Space between list items */
+  background-color: rgba(250, 250, 250, 0.9); /* Slightly opaque white background */
+  padding: 10px; /* Padding inside list items */
+  border-radius: 5px; /* Rounded corners for list items */
+}
+
+li:last-child {
+  margin-bottom: 0; /* Removes margin from the last item */
+}
+
+li a {
+  color: green; /* Keep the link color green */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the text bold */
+}
+
+li a:hover {
+  color: darkgreen; /* Changes color on hover for better interaction */
+  text-decoration: underline; /* Adds underline on hover */
+}
